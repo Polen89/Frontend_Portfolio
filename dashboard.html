@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carely | Medical Dashboard</title>
+    <link rel="stylesheet" href="css/dash.css">
+    <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to dashboard</a>
+<aside class="sidebar">
+    <a class="brand" href="#main"><span class="brand-icon" aria-hidden="true">+</span> carely<span class="brand-dot">.</span></a>
+    <p class="nav-label">WORKSPACE</p>
+    <nav aria-label="Dashboard navigation">
+        <a class="nav-item active" href="#main" aria-current="page"><span aria-hidden="true">▦</span> Overview</a>
+        <a class="nav-item" href="#summary"><span aria-hidden="true">♡</span> Practice summary</a>
+        <a class="nav-item" href="#tasks"><span aria-hidden="true">☑</span> My tasks <span class="nav-count" id="nav-task-count">4</span></a>
+        <a class="nav-item" href="#schedule"><span aria-hidden="true">▤</span> Schedule</a>
+    </nav>
+    <div class="sidebar-note"><span class="status-dot"></span> A little more care.<p>A little less busywork.</p></div>
+    <div class="profile"><span class="avatar">JS</span><div><strong>Dr. Jamie Smith</strong><small>General practitioner</small></div></div>
+</aside>
+<main id="main" class="main-content">
+    <header class="page-header"><div><p class="eyebrow">YOUR PRACTICE, AT A GLANCE</p><h1>Overview</h1></div><span class="demo-badge">Demo workspace</span></header>
+    <section class="welcome-container" aria-labelledby="welcome-heading">
+        <div class="welcome-text"><span class="welcome-tag">A fresh start to your day</span><h2 id="welcome-heading">Hello, Dr. Smith <span aria-hidden="true">✦</span></h2><p>A little clarity for a busy day.<br>Here's what's happening in your practice.</p><a class="primary-link" href="#tasks">Review your tasks <span aria-hidden="true">→</span></a></div>
+        <img src="images/med_welcome.png" alt="" class="welcome-image">
+    </section>
+    <section id="summary" class="card-container" aria-label="Practice summary">
+        <article class="card"><div><p class="metric-label">Patients today</p><strong class="metric">24</strong><p class="metric-note"><span class="positive">18 seen</span> · 6 upcoming</p></div><img src="images/paitents.png" alt=""></article>
+        <article class="card"><div><p class="metric-label">Open tasks</p><strong class="metric" id="open-task-count">4</strong><p class="metric-note">Let's clear your list</p></div><img src="images/med_task.png" alt=""></article>
+        <article class="card"><div><p class="metric-label">Referrals</p><strong class="metric">3</strong><p class="metric-note"><span class="amber-text">Awaiting review</span></p></div><img src="images/referrals.png" alt=""></article>
+        <article class="card"><div><p class="metric-label">Team updates</p><strong class="metric">2</strong><p class="metric-note">New this week</p></div><img src="images/whats_new.png" alt=""></article>
+    </section>
+    <div class="dashboard-details">
+        <section class="panel task-container" id="tasks" aria-labelledby="task-heading">
+            <div class="panel-header"><div><p class="eyebrow">STAY ON TRACK</p><h2 id="task-heading">Your task list</h2></div><span class="count-badge" id="task-status" aria-live="polite">4 remaining</span></div>
+            <p class="panel-description">Small steps. Better care.</p>
+            <ul class="task-list">
+                <li><label><input type="checkbox"><span class="task-copy"><strong>Review incoming referrals</strong><small>3 referrals ready for your review</small></span></label><span class="badge urgent">High priority</span></li>
+                <li><label><input type="checkbox"><span class="task-copy"><strong>Complete visit notes</strong><small>Wrap up documentation from morning visits</small></span></label><span class="badge">Today</span></li>
+                <li><label><input type="checkbox"><span class="task-copy"><strong>Prepare for team check-in</strong><small>Review the afternoon agenda</small></span></label><span class="badge">Today</span></li>
+                <li><label><input type="checkbox"><span class="task-copy"><strong>Confirm tomorrow's appointments</strong><small>Check availability with the front desk</small></span></label><span class="badge soft">Routine</span></li>
+            </ul>
+            <div class="task-footer"><span id="completion-label">0 of 4 complete</span><progress id="task-progress" max="4" value="0" aria-label="Task completion"></progress></div>
+        </section>
+        <section class="panel date" id="schedule" aria-labelledby="schedule-heading">
+            <div class="date-heading"><span class="eyebrow">MAKE ROOM FOR A GOOD DAY</span><p><time id="current-date"></time></p></div>
+            <div class="schedule-title"><h2 id="schedule-heading">Today's schedule</h2><span class="count-badge">3 events</span></div>
+            <ol class="schedule-list">
+                <li><time>09:00</time><div><strong>Morning consultations</strong><p>Patient appointments · Room 02</p><span class="badge soft">Clinical</span></div></li>
+                <li><time>12:30</time><div><strong>Team check-in</strong><p>Care team · Meeting room</p><span class="badge">15 minutes</span></div></li>
+                <li><time>14:00</time><div><strong>Afternoon consultations</strong><p>Patient appointments · Room 02</p><span class="badge soft">Clinical</span></div></li>
+            </ol>
+        </section>
+    </div>
+    <footer class="page-footer"><span>Thoughtful care starts with an organized day.</span><span>Sample data · For demonstration</span></footer>
+</main>
+</body>
+</html>
